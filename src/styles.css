@@ -1,0 +1,108 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+*
+  font-family: 'Roboto',微軟正黑體
+  color: #222
+
+.room-list {
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  padding: 0px;
+  /* padding: 0px; 把外面的邊距收回來 */
+}
+
+.col-sm-4.room-list:hover {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.room-list:hover .cover {
+  background-size: 110% auto;
+}
+
+.room-list .delete_btn {
+  float: right;
+  margin-right: 10px;
+  transition: 1s;
+}
+.room-list .delete_btn:hover {
+  color: red;
+  display: inline-block;
+}
+
+.room-list .cover {
+  position: relative;
+  background-size: 100%;
+  background-position: center center;
+  height: 115px;
+}
+.room-list .cover h3 {
+  position: absolute;
+  font-size: 20px;
+  background-color: #fff;
+  bottom: 0px;
+  width: 80%;
+  padding: 10px;
+}
+
+.room-list .info {
+  padding: 10px;
+}
+.room-list .info h3 {
+  font-size: 20px;
+}
+
+.room-list .info i {
+  float: right;
+}
+.room-list .info h4 {
+  font-size: 20px;
+}
+
+.room-list .info h5 {
+  font-size: 20px;
+}
+
+.room-list .info h5 .price {
+  float: right;
+  color: red;
+}
+.room-list .info h5 .price::after {
+  content: "$";
+}
+
+.edit-room i.fa.fa-trash {
+  cursor: pointer;
+  float: right;
+}
+.edit-room {
+  border-left: 3px solid #aaa;
+  padding-left: 10px;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 15px;
+  display: block;
+  /* position: relative; */
+}
+
+/* 要多加一個label上去，才會有作用 */
+.edit-room .label-edit-tag {
+  display: block;
+}
+.edit-room .label-edit-tag .toggle-room {
+  display: none;
+}
+.edit-room .label-edit-tag .toggle-room:checked + .edit-tag {
+  max-height: 500px;
+}
+.edit-room .label-edit-tag .edit-tag {
+  overflow: hidden;
+  max-height: 0px;
+}
